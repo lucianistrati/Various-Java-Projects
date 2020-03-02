@@ -1,0 +1,101 @@
+package PachetulMeu;
+import java.util.*;
+
+    
+public class NumeClass
+{
+    
+    
+    public static void main(String[] args){
+      
+    Scanner sc = new Scanner(System.in);
+    String sirDeCaractere = sc.nextLine();
+    System.out.println(sirDeCaractere);
+    
+    
+    int valoareaIntreaga = sc.nextInt();
+    int n,a,b;
+    int aDouaValoareaIntreaga = sc.nextInt();
+    a=valoareaIntreaga;
+    b=aDouaValoareaIntreaga;
+    n=a;
+  
+     
+    System.out.println("afisarePare(n)");
+    afisarePare(n);
+    System.out.println("comparare(a,b)");
+    comparare(a,b);
+    System.out.println("divizori(n)");
+    divizori(n);
+    System.out.println("myMethod(n)");
+    myMethod(n);
+    System.out.println("primalitate(n)");
+    primalitate(n);
+    System.out.println("ridicare(n)");
+    ridicare(a,b);
+    System.out.println("fibonacci(n)");
+    fibo(n);
+    
+}
+    public static void  afisarePare(int n) {
+    for(int j=0;j<=n;j=j+2){
+        System.out.println(j);
+    }
+     }
+        public static void myMethod(int n) {
+    int fact = 1;
+    for(int j=2;j<=n;j++)
+    {
+        fact=fact*j;
+    }
+    System.out.println(fact);
+}
+    public static void comparare(int a,int b) {
+    if(a>b){
+        System.out.println(a);
+    }
+    else{
+        System.out.println(b);
+    }
+}
+    
+   public static void divizori(int n) {    
+    for(int j=1;j<=n;j++){
+       if(n%j==0)
+        System.out.println(j);
+    }
+}
+     
+public static void primalitate(int n) {
+    boolean ok=false;
+    for(int j=2;j<=n/2;j++){
+        if(n%j==0)
+        {
+         System.out.println("numarul nu este prim"); ok=false;}
+        }
+        if(ok==true){
+            System.out.println("numarul e prim");
+        }
+    }
+    public static void ridicare(int a,int b) {
+        int pow=1;
+        for(int j=1;j<=b;j++)
+        {
+            pow=pow*a;
+        }
+        System.out.println(pow);
+    }
+    public static void fibo(int n) {
+        int[] dp;
+        dp = new int[100];
+        dp[0]=1;
+        dp[1]=1;
+        for(int i=2;i<=n;i++){
+            dp[i]=dp[i-1]+dp[i-2];
+        }
+        System.out.println(dp[n]);
+    }
+      
+
+}
+
